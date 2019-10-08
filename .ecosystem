@@ -1,0 +1,12 @@
+{
+	apps: [
+		{
+			name: 'api-1',
+			script: 'update-server.js',
+			env_hook: {
+				cwd: '/home/kuzzle/kuzzle/plugins/'
+				command: 'git pull && cd /home/kuzzle/ && bash ./kuzzle/install_all_plugins.sh && pm2 restart ./pm2.conf.yml',
+			}
+		}
+	]
+}
